@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca Digital · Material de los Sueños</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Partículas de fondo -->
+<canvas id="particles"></canvas>
+
+<header>
+  <h1>📚 Biblioteca Digital</h1>
+  <p>Material de los Sueños &middot; EPOEM #347 &middot; Ecatepec de Morelos</p>
+</header>
+
+<div class="library">
+
+  <!-- ── LIBRO 1 ──────────────────────────── -->
+  <div class="book-section" id="sec1">
+    <div class="book-label">Revista No. 602 &mdash; Delitos Sexuales &amp; Género Laboral</div>
+    <div class="book-wrap">
+      <div class="book-outer">
+        <div class="page-stack" id="stack1">
+          <canvas class="page-canvas"             id="c1a"></canvas>
+          <canvas class="page-canvas hidden-page" id="c1b"></canvas>
+          <div class="flip-flash" id="ff1"></div>
+          <div class="loading-overlay" id="ld1">
+            <div class="book-loader">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8"  y="8" width="24" height="48" rx="3" fill="#e94560" opacity=".9"/>
+                <rect x="32" y="8" width="24" height="48" rx="3" fill="#0f3460" opacity=".9"/>
+                <line x1="32" y1="8" x2="32" y2="56" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+              </svg>
+            </div>
+            <p>Abriendo libro…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="pb1"></div></div>
+    <div class="controls">
+      <button class="btn btn-nav"  id="prev1" disabled>&#9664; Anterior</button>
+      <span   class="page-counter" id="pi1">— / —</span>
+      <button class="btn btn-nav"  id="next1" disabled>Siguiente &#9654;</button>
+      <button class="btn btn-zoom" id="zo1" title="Reducir">🔍&minus;</button>
+      <button class="btn btn-zoom" id="zi1" title="Ampliar">🔍+</button>
+      <button class="btn btn-fs"   id="fs1">&#x26F6; Pantalla</button>
+      <a      class="btn btn-dl"   id="dl1" href="#" download="Revista_602.pdf">&#8595; PDF</a>
+    </div>
+  </div>
+
+  <!-- ── LIBRO 2 ──────────────────────────── -->
+  <div class="book-section" id="sec2">
+    <div class="book-label">Revista No. 601 &mdash; Material de los Sueños &middot; Edición No. 1</div>
+    <div class="book-wrap">
+      <div class="book-outer">
+        <div class="page-stack" id="stack2">
+          <canvas class="page-canvas"             id="c2a"></canvas>
+          <canvas class="page-canvas hidden-page" id="c2b"></canvas>
+          <div class="flip-flash" id="ff2"></div>
+          <div class="loading-overlay" id="ld2">
+            <div class="book-loader">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8"  y="8" width="24" height="48" rx="3" fill="#f4c542" opacity=".9"/>
+                <rect x="32" y="8" width="24" height="48" rx="3" fill="#1a0a30" opacity=".9"/>
+                <line x1="32" y1="8" x2="32" y2="56" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+              </svg>
+            </div>
+            <p>Abriendo libro…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="pb2"></div></div>
+    <div class="controls">
+      <button class="btn btn-nav"  id="prev2" disabled>&#9664; Anterior</button>
+      <span   class="page-counter" id="pi2">— / —</span>
+      <button class="btn btn-nav"  id="next2" disabled>Siguiente &#9654;</button>
+      <button class="btn btn-zoom" id="zo2" title="Reducir">🔍&minus;</button>
+      <button class="btn btn-zoom" id="zi2" title="Ampliar">🔍+</button>
+      <button class="btn btn-fs"   id="fs2">&#x26F6; Pantalla</button>
+      <a      class="btn btn-dl"   id="dl2" href="#" download="Revista_601.pdf">&#8595; PDF</a>
+    </div>
+  </div>
+
+</div><!-- /library -->
+
+<!-- PDF.js desde CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<!-- Datos de PDFs (divididos en partes para que cada archivo sea < 25 MB) -->
+<script src="pdf1a.js"></script>
+<script src="pdf1b.js"></script>
+<script src="pdf2.js"></script>
+<!-- Lógica del flipbook -->
+<script src="flipbook.js"></script>
+</body>
+</html>
